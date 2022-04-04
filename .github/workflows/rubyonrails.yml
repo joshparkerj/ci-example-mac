@@ -16,12 +16,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - run: gem install rails
-      - run: rails db:schema:load
+      - run: bin/rails db:schema:load
       - run: gem install rake
-      - run: rake
+      - run: bin/rake
       - run: gem install rubocop
-      - run: rubocop
+      - run: bin/rubocop
       - run: gem install bundler-audit
-      - run: bundler-audit
+      - run: bin/bundler-audit
       - run: gem install brakeman
-      - run: brakeman
+      - run: bin/brakeman
