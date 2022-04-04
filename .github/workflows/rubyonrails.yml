@@ -50,7 +50,8 @@ jobs:
         with:
           bundler-cache: true
       - name: Rubocop
-        run: rubocop
+      - run: gem install rubocop
+      - run: rubocop
         
   security-audit-deps:
     runs-on: ubuntu-latest
@@ -62,7 +63,8 @@ jobs:
         with:
           bundler-cache: true
       - name: Bundler Audit
-        run: bundler-audit
+      - run: gem install bundler-audit
+      - run: bundler-audit
         
   security-audit-code:
     runs-on: ubuntu-latest
@@ -74,4 +76,5 @@ jobs:
         with:
           bundler-cache: true
       - name: Brakeman
-        run: brakeman
+      - run: gem install brakeman
+      - run: brakeman
