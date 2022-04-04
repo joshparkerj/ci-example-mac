@@ -74,3 +74,5 @@ group :test do
 end
 
 gem 'bundler-audit', '~> 0.9.0'
+
+gem "pg", "~> 1.3"
