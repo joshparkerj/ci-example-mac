@@ -49,8 +49,8 @@ jobs:
         uses: ruby/setup-ruby@8f312efe1262fb463d906e9bf040319394c18d3e # v1.92
         with:
           bundler-cache: true
-      - name: Lint Ruby files
-        run: bin/rubocop --parallel
+      - name: Rubocop
+        run: rubocop
         
   security-audit-deps:
     runs-on: ubuntu-latest
@@ -61,8 +61,8 @@ jobs:
         uses: ruby/setup-ruby@8f312efe1262fb463d906e9bf040319394c18d3e # v1.92
         with:
           bundler-cache: true
-      - name: Security audit dependencies
-        run: bundler-audit --update
+      - name: Bundler Audit
+        run: bundler-audit
         
   security-audit-code:
     runs-on: ubuntu-latest
@@ -73,5 +73,5 @@ jobs:
         uses: ruby/setup-ruby@8f312efe1262fb463d906e9bf040319394c18d3e # v1.92
         with:
           bundler-cache: true
-      - name: Security audit application code
-        run: bin/brakeman -q -w2
+      - name: Brakeman
+        run: brakeman
