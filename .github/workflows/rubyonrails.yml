@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     # note: ubuntu-latest should already have Ruby 2.7.0p0 installed
     # https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-Readme.md#language-and-runtime
+    env:
+      GEM_PATH: /home/runner/work/ci-example-mac/ci-example-mac/gem-path
+      GEM_HOME: /home/runner/work/ci-example-mac/ci-example-mac/gem-path/gem-home
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
