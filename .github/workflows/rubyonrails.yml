@@ -11,7 +11,7 @@ jobs:
     # https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-Readme.md#language-and-runtime
     env:
       GEM_PATH: /home/runner/work/ci-example-mac/ci-example-mac/gem-path
-      GEM_HOME: /home/runner/work/ci-example-mac/ci-example-mac/gem-path/gem-home
+      GEM_HOME: /home/runner/work/ci-example-mac/ci-example-mac/gem-path
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
