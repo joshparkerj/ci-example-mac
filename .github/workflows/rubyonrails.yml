@@ -49,7 +49,6 @@ jobs:
         uses: ruby/setup-ruby@8f312efe1262fb463d906e9bf040319394c18d3e # v1.92
         with:
           bundler-cache: true
-      - name: Rubocop
       - run: gem install rubocop
       - run: rubocop
         
@@ -62,7 +61,6 @@ jobs:
         uses: ruby/setup-ruby@8f312efe1262fb463d906e9bf040319394c18d3e # v1.92
         with:
           bundler-cache: true
-      - name: Bundler Audit
       - run: gem install bundler-audit
       - run: bundler-audit
         
@@ -75,6 +73,5 @@ jobs:
         uses: ruby/setup-ruby@8f312efe1262fb463d906e9bf040319394c18d3e # v1.92
         with:
           bundler-cache: true
-      - name: Brakeman
       - run: gem install brakeman
       - run: brakeman
